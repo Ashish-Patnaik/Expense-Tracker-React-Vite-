@@ -2,7 +2,7 @@
 
 @font-face {
   font-family: Rio;
-  src: url(PLAYGROUND.ttf);
+  src: url('./public/PLAYGROUND.ttf');;
 }
 /* For tablets and smaller devices (768px and below) */
 @media (max-width: 768px) {
@@ -99,7 +99,7 @@ body {
   margin: 0;
   font-family: 'Rio';
   font-size: 38px;
-  background-image:url('./bg.jpg');
+  background-image:url('./public/bg.jpg');
   background-size: cover;
 }
 
