@@ -2,37 +2,37 @@
 
 @font-face {
   font-family: Rio;
-  src: url('./public/PLAYGROUND.ttf');;
+  src: url("./public/PLAYGROUND.ttf");
 }
 /* For tablets and smaller devices (768px and below) */
 @media (max-width: 768px) {
   body {
-    font-size: 28px;  /* Reduce font size for readability */
-    padding: 10px;    /* Add padding for smaller screens */
+    font-size: 28px; /* Reduce font size for readability */
+    padding: 10px; /* Add padding for smaller screens */
   }
 
   .container {
-    width: 90%;  /* Make the container take more width */
-    margin: 20px auto;  
+    width: 90%; /* Make the container take more width */
+    margin: 20px auto;
   }
 
   h1 {
-    font-size: 50px;  /* Adjust heading size */
+    font-size: 50px; /* Adjust heading size */
   }
 
   .rir {
-    padding: 8px;  /* Adjust button padding */
+    padding: 8px; /* Adjust button padding */
     margin: 15px;
   }
 
   .inc-exp-container {
-    flex-direction: column;  /* Stack items vertically */
+    flex-direction: column; /* Stack items vertically */
     text-align: center;
   }
 
   .inc-exp-container > div:first-of-type {
-    border-right: none;  /* Remove vertical border */
-    border-bottom: 1px solid #dedede;  /* Add horizontal border */
+    border-right: none; /* Remove vertical border */
+    border-bottom: 1px solid #dedede; /* Add horizontal border */
     margin-bottom: 10px;
   }
 
@@ -43,15 +43,15 @@
 
   .list li {
     padding: 8px;
-    flex-direction: column;  /* Stack content vertically */
+    flex-direction: column; /* Stack content vertically */
   }
 
   .delete-btn {
-    position: relative;  /* Adjust delete button position */
+    position: relative; /* Adjust delete button position */
     transform: none;
     top: 0;
     left: 0;
-    opacity: 1;  /* Always visible on smaller screens */
+    opacity: 1; /* Always visible on smaller screens */
   }
 }
 
@@ -65,10 +65,11 @@
     font-size: 40px;
   }
 
-  input[type='text'],
-  input[type='number'] {
+  input[type="text"],
+  input[type="number"],
+  select {
     font-size: 18px;
-    padding: 12px;  /* Reduce padding */
+    padding: 12px; /* Reduce padding */
   }
 
   .btn {
@@ -97,9 +98,9 @@ body {
   justify-content: center;
   min-height: 100vh;
   margin: 0;
-  font-family: 'Rio';
+  font-family: "Rio";
   font-size: 38px;
-  background-image:url('./public/bg.jpg');
+  background-image: url("./public/bg.jpg");
   background-size: cover;
 }
 
@@ -112,9 +113,8 @@ h1 {
   letter-spacing: 1px;
   margin: 0;
   font-size: 70px;
-
 }
-.rir{
+.rir {
   background-color: skyblue;
   color: white;
   padding: 10px;
@@ -137,14 +137,13 @@ h4 {
 }
 
 .inc-exp-container {
-  background-color:bisque;
+  background-color: bisque;
   box-shadow: var(--box-shadow);
   padding: 20px;
   display: flex;
   justify-content: space-between;
   margin: 20px 0;
   border-radius: 40px;
-  
 }
 
 .inc-exp-container > div {
@@ -175,8 +174,9 @@ label {
   margin: 10px 0;
 }
 
-input[type='text'],
-input[type='number'] {
+input[type="text"],
+input[type="number"],
+select {
   border: 1px solid #dedede;
   border-radius: 40px;
   display: block;
@@ -222,13 +222,10 @@ input[type='number'] {
   padding: 10px;
   margin: 10px 0;
   border-radius: 50px;
- 
-
 }
 
 .list li.plus {
   border-right: 10px solid #2ecc71;
-  
 }
 
 .list li.minus {
