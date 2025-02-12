@@ -1,10 +1,18 @@
-import React, { createContext, useReducer } from "react";
+import React, { createContext, useEffect, useReducer } from "react";
 import AppReducer from "./AppReducer";
+import {
+  getFromLocalStorage,
+  saveToLocalStorage,
+} from "../storage/localStorage";
+
+//getting the prev state/data from local storage
+const getInitialState = () => {
+  const localData = getFromLocalStorage("transactions");
+  return localData ? { transactions: localData } : { transactions: [] };
+};
 
 // Initial state
-const initialState = {
-  transactions: [],
-};
+const initialState = getInitialState();
 
 // Create context
 export const GlobalContext = createContext(initialState);
@@ -12,6 +20,12 @@ export const GlobalContext = createContext(initialState);
 // Provider component
 export const GlobalProvider = ({ children }) => {
   const [state, dispatch] = useReducer(AppReducer, initialState);
+
+  useEffect(() => {
+    if (state.transactions) {
+      saveToLocalStorage("transactions", state.transactions);
+    }
+  }, [state.transactions]);
 
   // Actions
   function deleteTransaction(id) {
