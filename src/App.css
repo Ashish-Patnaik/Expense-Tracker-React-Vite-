@@ -1,85 +1,9 @@
+/* Import Font */
 /* @import url('https://fonts.googleapis.com/css?family=Lato&display=swap'); */
 
 @font-face {
   font-family: Rio;
   src: url("./public/PLAYGROUND.ttf");
-}
-/* For tablets and smaller devices (768px and below) */
-@media (max-width: 768px) {
-  body {
-    font-size: 28px; /* Reduce font size for readability */
-    padding: 10px; /* Add padding for smaller screens */
-  }
-
-  .container {
-    width: 90%; /* Make the container take more width */
-    margin: 20px auto;
-  }
-
-  h1 {
-    font-size: 50px; /* Adjust heading size */
-  }
-
-  .rir {
-    padding: 8px; /* Adjust button padding */
-    margin: 15px;
-  }
-
-  .inc-exp-container {
-    flex-direction: column; /* Stack items vertically */
-    text-align: center;
-  }
-
-  .inc-exp-container > div:first-of-type {
-    border-right: none; /* Remove vertical border */
-    border-bottom: 1px solid #dedede; /* Add horizontal border */
-    margin-bottom: 10px;
-  }
-
-  .btn {
-    font-size: 22px;
-    padding: 15px;
-  }
-
-  .list li {
-    padding: 8px;
-    flex-direction: column; /* Stack content vertically */
-  }
-
-  .delete-btn {
-    position: relative; /* Adjust delete button position */
-    transform: none;
-    top: 0;
-    left: 0;
-    opacity: 1; /* Always visible on smaller screens */
-  }
-}
-
-/* For mobile devices (480px and below) */
-@media (max-width: 480px) {
-  body {
-    font-size: 20px;
-  }
-
-  h1 {
-    font-size: 40px;
-  }
-
-  input[type="text"],
-  input[type="number"],
-  select {
-    font-size: 18px;
-    padding: 12px; /* Reduce padding */
-  }
-
-  .btn {
-    font-size: 18px;
-    padding: 12px;
-  }
-
-  .list li {
-    font-size: 16px;
-  }
 }
 
 :root {
@@ -88,6 +12,8 @@
 
 * {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 body {
@@ -97,29 +23,24 @@ body {
   align-items: center;
   justify-content: center;
   min-height: 100vh;
-  margin: 0;
-  font-family: "Rio";
+  font-family: "Rio", sans-serif;
   font-size: 38px;
   background-image: url("./public/bg.jpg");
   background-size: cover;
+  margin: 0;
 }
 
 .container {
   margin: 30px auto;
-  width: 400px;
+  width: 90%;
+  max-width: 400px;
+  padding: 15px;
 }
 
 h1 {
   letter-spacing: 1px;
-  margin: 0;
   font-size: 70px;
-}
-.rir {
-  background-color: skyblue;
-  color: white;
-  padding: 10px;
-  border-radius: 40px;
-  margin: 20px;
+  text-align: center;
 }
 
 h3 {
@@ -128,12 +49,14 @@ h3 {
   margin: 40px 0 10px;
   font-size: 40px;
   color: black;
+  text-align: center;
 }
 
 h4 {
   margin: 0;
   text-transform: uppercase;
   font-size: 30px;
+  text-align: center;
 }
 
 .inc-exp-container {
@@ -180,10 +103,9 @@ select {
   border: 1px solid #dedede;
   border-radius: 40px;
   display: block;
-  font-size: 16px;
+  font-size: 26px;
   padding: 20px;
   width: 100%;
-  font-size: 26px;
   font-family: Rio;
 }
 
@@ -250,4 +172,93 @@ select {
 
 .list li:hover .delete-btn {
   opacity: 1;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  body {
+    font-size: 28px;
+    padding: 10px;
+  }
+
+  .container {
+    width: 90%;
+    max-width: 400px;
+  }
+
+  h1 {
+    font-size: 50px;
+  }
+
+  .btn {
+    font-size: 22px;
+    padding: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    font-size: 20px;
+  }
+
+  h1 {
+    font-size: 40px;
+  }
+
+  input[type="text"],
+  input[type="number"],
+  select {
+    font-size: 18px;
+    padding: 12px;
+  }
+
+  .btn {
+    font-size: 18px;
+    padding: 12px;
+  }
+
+  .list li {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 320px) {
+  body {
+    font-size: 16px;
+    padding: 5px;
+  }
+
+  .container {
+    width: 95%;
+    padding: 10px;
+  }
+
+  h1 {
+    font-size: 32px;
+  }
+
+  .btn {
+    font-size: 16px;
+    padding: 10px;
+  }
+
+  .list li {
+    font-size: 14px;
+    padding: 5px;
+  }
+
+  input[type="text"],
+  input[type="number"],
+  select {
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  .delete-btn {
+    font-size: 14px;
+    padding: 2px;
+    position: static;
+    transform: none;
+    opacity: 1;
+  }
 }
